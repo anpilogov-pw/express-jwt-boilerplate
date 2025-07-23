@@ -1,0 +1,64 @@
+{
+  "name": "express-jwt-boilerplate",
+  "version": "1.0.0",
+  "description": "Шаблон backend-приложения на Node.js с авторизацией через JWT, регистрацией, входная группа.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run prisma-gen && webpack --mode production",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "prisma-gen": "npx prisma generate --schema prisma/schema.prisma",
+    "update": "git pull && npx prisma generate",
+    "migrate_deploy": "npx prisma migrate deploy",
+    "migrate_reset": "npx prisma migrate reset"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anpilogov-pw/express-jwt-boilerplate.git"
+  },
+  "author": "",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/anpilogov-pw/express-jwt-boilerplate/issues"
+  },
+  "homepage": "https://github.com/anpilogov-pw/express-jwt-boilerplate#readme",
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.515.0",
+    "@prisma/client": "5.0.0",
+    "bcrypt": "5.1.0",
+    "class-validator": "0.14.2",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "express-fileupload": "1.4.3",
+    "express-rate-limit": "7.4.0",
+    "express-validator": "7.0.1",
+    "form-data": "4.0.1",
+    "google-auth-library": "9.15.0",
+    "helmet": "8.1.0",
+    "jsonwebtoken": "9.0.1",
+    "mailgun.js": "10.2.3",
+    "prisma": "5.0.0",
+    "qs": "6.13.0",
+    "redis": "5.6.0",
+    "request-ip": "3.3.0",
+    "uuid": "9.0.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "5.0.0",
+    "@types/cors": "2.8.13",
+    "@types/express": "4.17.17",
+    "@types/express-fileupload": "1.4.4",
+    "@types/jsonwebtoken": "9.0.2",
+    "@types/node": "20.4.2",
+    "@types/request-ip": "0.0.41",
+    "@types/uuid": "9.0.4",
+    "concurrently": "8.2.0",
+    "cors": "2.8.5",
+    "nodemon": "3.0.1",
+    "ts-loader": "9.4.4",
+    "ts-node": "10.9.1",
+    "typescript": "5.1.6",
+    "webpack": "5.88.2",
+    "webpack-cli": "5.1.4",
+    "webpack-node-externals": "3.0.0"
+  }
+}
