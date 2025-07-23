@@ -1,13 +1,13 @@
-import { PrismaClient } from '.prisma/client';
+import { PrismaClient } from "@prisma/client";
 import { BaseService } from './base.service';
 import { TUser } from 'UserType';
 
 export class UserService extends BaseService<TUser> {
-  protected model: PrismaClient['User'];
+  protected model: PrismaClient['users'];
 
   constructor(prisma?: PrismaClient) {
     super(prisma);
-    this.model = this.prisma.user;
+    this.model = this.prisma.users;
   }
 
   async findByEmail(email: string) {

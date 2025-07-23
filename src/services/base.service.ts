@@ -1,4 +1,4 @@
-import { PrismaClient } from '.prisma/client';
+import { PrismaClient } from "@prisma/client";
 import { ICrudService } from '../interfaces';
 
 export abstract class BaseService<T, ID = number> implements ICrudService<T, ID> {

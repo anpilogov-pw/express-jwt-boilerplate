@@ -5,6 +5,7 @@ dotenv.config();
 import cors from 'cors';
 import helmet from 'helmet';
 import router from './router';
+import chalk from 'chalk';
 
 const app: Express = express();
 const port: string = process.env.PORT || '3000';
@@ -25,6 +26,11 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-  console.log(`App start on http://localhost:${port}`);
+  console.clear();
+  console.log(chalk.green.bold('\n🚀 App started successfully\n'));
+  console.table({
+    'Local URL': `http://localhost:${port}`,
+    Port: port,
+    Status: 'Listening...',
+  });
 });

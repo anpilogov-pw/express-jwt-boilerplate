@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run prisma-gen && webpack --mode production",
     "dev": "nodemon --exec ts-node src/index.ts",
-    "prisma-gen": "npx prisma generate --schema prisma/schema.prisma",
+    "prisma-gen": "npx prisma generate",
     "update": "git pull && npx prisma generate",
     "migrate_deploy": "npx prisma migrate deploy",
     "migrate_reset": "npx prisma migrate reset"
@@ -25,6 +25,7 @@
     "@aws-sdk/client-s3": "3.515.0",
     "@prisma/client": "5.0.0",
     "bcrypt": "5.1.0",
+    "chalk": "^5.4.1",
     "class-validator": "0.14.2",
     "dotenv": "16.3.1",
     "express": "4.18.2",
